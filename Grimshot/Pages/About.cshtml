@@ -136,9 +136,10 @@
 		//this is what is done each new user connects
 		//so here we need to update where every player is at the moment so when a new user connects he can see the other players
 		//location/shape
+		var update;
 		connection.start().then(
 			//this is not working anymore after change due to void etc..
-			function update(oldPosition, x, y, id) {
+		    update = function (oldPosition, x, y, id) {
 
 				//if user has walked we need to update this!
 				if (oldPosition.x && oldPosition.y != x && y) {
